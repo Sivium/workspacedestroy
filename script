@@ -1,0 +1,11 @@
+for i,v in pairs(workspace:GetChildren()) do
+	if v.Name ~= "Camera" and v.Name ~= "Terrain" then
+	v:Destroy()
+		local msg = "game.Workspace."..tostring(v).." Has been destroyed."
+		print(msg)
+	end
+	local newgui = game.StarterGui.SampleTextSpace.frame:Clone()
+	newgui.Parent = game.StarterGui.SampleTextSpace
+	newgui.label.Text = "workspace has been destroyed"
+	newgui.Visible = true
+end
